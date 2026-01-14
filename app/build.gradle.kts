@@ -6,7 +6,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
 
     // Kotlin Serialization
-    kotlin("plugin.serialization") version "2.3.0"
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -82,6 +82,7 @@ dependencies {
 
     // Retrofit
     implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.kotlinx.serialization)
 
     // Kotlin Serialization
     implementation(libs.kotlinx.serialization.json)
